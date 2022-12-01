@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  /* margin-left: 236px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header .logo {
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+header .navigation a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+header .navigation a:not(:last-child) {
+  margin-right: 20px;
+}
+header .navigation a:hover {
+  background: #c8e4ed;
+}
+
+label {
+  display: none;
+}
+
+#check {
+  z-index: 3;
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  }
+  label {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  label:hover {
+    color: #fff;
+    background-color: #fff;
+  }
+  label .close-btn {
+    display: none;
+  }
+  #check:checked ~ header .navigation {
+    z-index: 2;
+    position: fixed;
+    background: #226a80;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #check:checked ~ header .navigation a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+  }
+  #check:checked ~ header .navigation a:hover {
+    background-color: #fff;
+  }
+  #check:checked ~ header label .menu-btn {
+    display: none;
+  }
+
+  #check:checked ~ header label .close-btn {
+    z-index: 2;
+    display: block;
+    position: fixed;
+  }
+  label .menu-btn {
+    position: absolute;
+  }
+  header .logo {
+    position: absolute;
+    bottom: -6px;
+  }
+}

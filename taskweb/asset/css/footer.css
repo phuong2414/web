@@ -1,0 +1,25 @@
+.foo {
+}
+.footer,
+.f-icon,
+.f-des {
+  margin: 30px;
+  justify-content: center;
+  text-align: center;
+  color: #ccc;
+}
+
+.footer {
+  color: rgb(153, 150, 150);
+  padding-top: 30px;
+}
+
+.footer-text {
+  padding-left: 10px;
+  border-left: 1px solid rgb(138, 135, 135);
+}
+.favi {
+  color: rgb(129, 128, 128);
+  margin: 0 20px;
+  font-size: xx-large;
+}
